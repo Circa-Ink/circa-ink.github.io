@@ -6,14 +6,14 @@ body {
     margin: 0 auto;
     background-color: #fff8e6;
 }
-nav {
+.navigation {
     background-color: #FFFFFF;
     position: fixed;
     top: 0;
     width: 100%;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
 }
-nav > .wrap {
+.navigation > .wrap {
     padding: 1em;
     margin: auto;
     max-width: 900px;
@@ -22,6 +22,55 @@ nav > .wrap {
     justify-content: space-between;
     align-items: center;
     
+}
+nav {
+    position: fixed;
+    right: -100%;
+    top: 0;
+    width: 33%;
+    background: white;
+    height: 100vh;
+    z-index: 2;
+    transition: right .5s ease-in-out;
+    padding: 3em;
+    box-shadow: -4px 0px 8px 0px rgba(0, 0, 0, 0.25);
+}
+a {
+    text-decoration: none;
+    font-family: 'Krona One', sans-serif;
+}
+.menu-btn {
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 3.5em;
+}
+
+ul li a {
+    font-size: .9rem;
+    color: black;
+}
+
+ul li a.active {
+    font-weight: bold;
+}
+
+.open {
+    right: 0%;
+}
+.close {
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-bottom: 6.6em;
 }
 .wrap > h1 {
     font-size: 1.2em;
@@ -50,6 +99,7 @@ a > h3 {
     height: 22em;
     background-image:url(../assets/hero.png);
     background-size:cover;
+    object-fit: cover;
     background-position: center;
 
 } 
@@ -110,7 +160,7 @@ img.inkboy {
 }
 .owner > p {
     margin: auto;
-    padding: 1em 1em 0 1em;
+    padding: 1em 1em 1em 1em;
     color: #000;
     font-family: Istok Web;
     font-size: .9rem;
@@ -187,4 +237,14 @@ p.center {
     padding: 1em 0 0 0;
     white-space: nowrap;
     text-align: center;
+}
+
+@media screen and (min-width:850px) {
+    .hero {
+        height:30em;
+        background-image:url(../assets/hero1.png);
+    }
+    nav {
+        width: 20%;
+    }
 }

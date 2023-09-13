@@ -12,23 +12,30 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <nav>
+    <div class="navigation">
         <div class="wrap">
         <img src="assets/logo.svg" class="logo" alt="Circa Ink Logo">        
         <h1>Circa Ink</h1>
-        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M3 17.4709H21M3 12.4709H21M3 7.47095H21" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+            <nav>
+            <img src="assets/close.svg" class="close" alt="Close Menu">
+            <ul>
+                <li><a href="#inkboy" class="active">Inkboy</a></li>
+                <li><a href="#inkpath">Inkpath</a></li>
+                <li><a href="#blaze">Blaze</a></li>
+                <li><a href="#journeyink">JourneyInk</a></li>
+            </ul>
+        </nav>
+        <img src="assets/menu.svg" class="menu-btn" alt="Open Menu">
         </div>  
-    </nav>
+    </div>
     <div class="wrapper">
     <div class="hero"></div>
     
         <div class="btn-container">
-        <a href="#" class="button"><img src="assets/calendar.svg" alt="calendar icon"><h3>Schedule an Appointment</h3></a>
+        <a href="https://CircaInk.as.me/" class="button"><img src="assets/calendar.svg" alt="calendar icon"><h3>Schedule an Appointment</h3></a>
     </div>
-    <section class="owner">
-        <h1>Shop Owner - Inkboy</h1>
+    <section class="owner" id="inkboy">
+        <h1 >Shop Owner - Inkboy</h1>
         <div class="img-container">
         <img src="assets/inkboy.png" class="inkboy" alt="A photo of the shop owner, inkboy">
     </div>
@@ -37,7 +44,7 @@
             freedom and independence as he services each client. Known as “The Cover up King,” he is able to bring new life to body parts that were once covered by shame. He is well known and respected in his city. The trust he has built on his reputation alone leaves people trusting his opinion and allowing him to create for them. One of his recent passions has been advancing his love for writing and art by authoring a children’s book, and also starting several businesses. His creativity and drive has no limit and he is always up for the next big thing and adventure.</p>
     </section>
 
-    <div class="heading"><h1>Introducing "InkPath: Transforming Lives, One Tattoo at a Time"</h1></div>
+    <div class="heading" id="inkpath"><h1>Introducing "InkPath: Transforming Lives, One Tattoo at a Time"</h1></div>
         <section class="owner">
             <div class="img-container">
         <img src="assets/inkpath.png" class="inkpath" alt="assets/inkpath promo image">
@@ -54,16 +61,16 @@
                 or<br>
                 achestnutmd410@gmail.com<br>circainkbaltimore@gmail.com</p>
     </section>
-    <div class="heading2"><h1>Artist Bio - Blaze</h1></div>
+    <div class="heading2" id="blaze"><h1>Artist Bio - Blaze</h1></div>
     <section class="owner">
         <div class="img-container">
-        <img src="assets/blaze.png" class="blaze" alt="assets/inkpath promo image">
+        <img src="assets/blaze.jpg" class="blaze" alt="assets/inkpath promo image">
     </div>
         <p>Born and raised in Baltimore, Blaze is a multifaceted, father of two who has always had a love for art - whether it be music, drawing and painting, customizing sneakers, or carpentry; when he has a vision, he makes it come to life.
 
             Blaze started tattooing in 2009 when he got his first machine as a gift, and the rest is history. Blaze has done countless tattoos, ranging from cute and dainty hearts to large chest and back pieces, but his favorite style is cartoons. The attention to detail that Blaze has helps him to continue to sharpen his skill with the ink and needle. He practices with new techniques and equipment to ensure the best possible outcome for his clients. Like a true artist, Blaze takes his time to understand his canvas and the art that is going on it.</p>
     </section>
-    <div class="heading"><h1>JourneyInk</h1></div>
+    <div class="heading" id="journeyink"><h1>JourneyInk</h1></div>
     <section class="owner">
         <div class="img-container">
         <img src="assets/journeyink.png" class="blaze" alt="assets/journeyink promo image">
@@ -72,7 +79,7 @@
         <p class="center">Schedule your session(s) on Acuity!</p>
     </section>
     <div class="btn-container">
-        <a href="#" class="button"><img src="assets/calendar.svg" alt="calendar icon"><h3>Schedule an Appointment</h3></a>
+        <a href="https://CircaInk.as.me/" class="button"><img src="assets/calendar.svg" alt="calendar icon"><h3>Schedule an Appointment</h3></a>
     </div>
 </div>
 <footer>
@@ -83,5 +90,16 @@
         443-824-9394</h3>
     </div>
 </footer>
+<script>
+
+    document.querySelector(".menu-btn").addEventListener("click", function () { 
+        document.querySelector("nav").classList.toggle("open") 
+    });
+
+    document.querySelector(".close").addEventListener("click", function () { 
+        document.querySelector("nav").classList.toggle("open") 
+    });
+
+</script>
 </body>
 </html>
