@@ -247,4 +247,8 @@ p.center {
     nav {
         width: 20%;
     }
+    ul li a {
+        font-size: 1.1rem;
+        color: black;
+    }
 }
